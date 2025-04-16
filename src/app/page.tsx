@@ -4,7 +4,6 @@ import ContactUs from "@/components/ContactUs";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import OurPrincipals from "@/components/OurPrincipals";
-// import ParallaxImage from "@/components/Parallax";
 import ServicesSolutions from "@/components/ServicesSolutions";
 
 export default function Home() {
