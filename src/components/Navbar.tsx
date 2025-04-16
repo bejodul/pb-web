@@ -4,10 +4,18 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
+  const pathname = usePathname();
+
+  const isServicePage = ["/services", "/solutions"];
+
+  const effectiveActiveSection = isServicePage.includes(pathname)
+    ? "services"
+    : activeSection;
 
   // Definisikan nama-nama section
   const sections = [
@@ -21,6 +29,8 @@ export default function Navbar() {
 
   // Menggunakan IntersectionObserver untuk mendeteksi section yang terlihat
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -45,7 +55,7 @@ export default function Navbar() {
         if (el) observer.unobserve(el);
       });
     };
-  }, []);
+  }, [pathname]);
 
   const navItems = [
     { name: "Home", href: "/", section: "home" },
@@ -80,7 +90,7 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 className={`hover:text-blue-600 transition duration-300 ${
-                  activeSection === item.section ? "font-bold" : ""
+                  effectiveActiveSection === item.section ? "font-bold" : ""
                 }`}
                 onClick={() => setActiveSection(item.section)}
               >
