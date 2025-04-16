@@ -49,11 +49,11 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/", section: "home" },
-    { name: "About Us", href: "#about", section: "about" },
-    { name: "Services & Solutions", href: "#services", section: "services" },
-    { name: "Clients", href: "#clients", section: "clients" },
-    { name: "Principals", href: "#principals", section: "principals" },
-    { name: "Contact Us", href: "#contact", section: "contact" },
+    { name: "About Us", href: "/#about", section: "about" },
+    { name: "Services & Solutions", href: "/#services", section: "services" },
+    { name: "Clients", href: "/#clients", section: "clients" },
+    { name: "Principals", href: "/#principals", section: "principals" },
+    { name: "Contact Us", href: "/#contact", section: "contact" },
   ];
 
   return (
