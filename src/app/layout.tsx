@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-});
 
 export const metadata: Metadata = {
   title: "Primus Niaga Brunei SDN BHD",
@@ -20,11 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
-        <Navbar/>
+    <html lang="en" className="font-inter antialiased">
+      <body>
+        <Navbar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

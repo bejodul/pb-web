@@ -23,8 +23,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative bg-cover bg-center min-h-[95vh] mt-[70px]"
-      style={{ backgroundImage: "url('/background/layered-waves.png')" }}
+      className="relative bg-cover bg-center min-h-[95vh] mt-[70px] bg-gradient-to-br from-[#1B4E3B] via-[#3EB489] to-[#3EB489]"
+      // style={{ backgroundImage: "url('/background/layered-waves.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 opacity-50"></div>
@@ -32,10 +32,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center md:px-50 sm:px-10 py-24">
         <div className="flex flex-col gap-15 max-w-4xl">
-          <h1 className="text-[40px] font-bold text-green">
-            We brings You closer to Automation
+          <h1 className="text-[40px] font-bold text-white">
+            We bring You closer to Automation
           </h1>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-white">
             In the midst of a world spurred by the fast-paced evolution of
             technology, demands have transformed from basic Information
             Communication Technology (ICT) requirements to those that are
@@ -47,7 +47,7 @@ const HeroSection = () => {
           <button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#006400] text-white rounded-[10px] text-lg font-semibold w-40 transition-all duration-300 transform hover:w-50 hover:text-xl hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1F3A93] text-white rounded-[10px] text-lg font-semibold w-40 transition-all duration-300 transform hover:w-50 hover:text-xl hover:scale-105"
           >
             <span
               className={`transition-all duration-300 ${
