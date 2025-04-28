@@ -1,0 +1,12 @@
+.company-name {
+  font-family: "Palladio URW", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2785c5;
+}
+
+.company-tag {
+  font-family: "Arial", serif;
+  font-size: 1.2rem;
+  color: #6B9E28 ;
+}

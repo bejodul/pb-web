@@ -1,0 +1,15 @@
+.title {
+  font-family: "Palladio URW", serif;
+  font-size: 3rem;
+  color: #333333;
+  text-shadow: 5px 3px 4px #e1dcdc;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-family: "Palladio URW", serif;
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: bold;
+  text-shadow: 5px 3px 4px #e1dcdc;
+}

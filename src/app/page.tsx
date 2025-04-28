@@ -1,7 +1,7 @@
 import AboutUs from "@/components/About";
 import OurClients from "@/components/Clients";
 import ContactUs from "@/components/ContactUs";
-import HeroSection from "@/components/Hero";
+import HeroSection from "@/components/Hero/Hero";
 import OurPrincipals from "@/components/OurPrincipals";
 import ServicesSolutions from "@/components/ServicesSolutions";
 
