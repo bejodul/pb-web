@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 // components/OurPrincipals.tsx
-import Image from "next/image";
 
 export default function OurPrincipals() {
   return (
@@ -17,12 +17,13 @@ export default function OurPrincipals() {
 
         {/* Logo image */}
         <div className="flex justify-center">
-          <Image
-            src={"/images/principal.png"} // ganti sesuai nama file kamu
+          <img
+            src="/images/principal.png" // Sesuaikan dengan nama file kamu
             alt="Our Principals"
-            width={1200}
-            height={800}
+            width="1200"
+            height="800"
             className="w-full h-auto max-w-5xl max-h-[600px]"
+            loading="lazy" // Gambar akan dimuat secara lazy ketika dibutuhkan
           />
         </div>
       </div>

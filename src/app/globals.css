@@ -5,7 +5,7 @@
   --foreground: #171717;
   --primary-green: #1a4d3d;
   --primary-gray: #4b5563;
-  --font-inter: 'Inter', sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @theme inline {
@@ -61,4 +61,66 @@ body {
       transform: translateY(0);
     }
   }
+}
+
+/* globals.css */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.circuit-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #3b82f6 1px, transparent 1px),
+                    linear-gradient(to bottom, #3b82f6 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+  animation: moveCircuit 10s linear infinite;
+}
+
+@keyframes moveCircuit {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.content {
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.content button {
+  padding: 10px 20px;
+  background-color: #3EB489;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }

@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 const HeroSection = () => {
   const [hovered, setHovered] = useState(false);
@@ -36,12 +36,11 @@ const HeroSection = () => {
             We bring You closer to Automation
           </h1>
           <p className="text-lg text-white">
-            In the midst of a world spurred by the fast-paced evolution of
-            technology, demands have transformed from basic Information
-            Communication Technology (ICT) requirements to those that are
-            integrated, fast, and most of all, reliable. Imagine the need for
-            technology in the different business sectors, multiplied by the many
-            countries all over the globe – and then zero in on the ASEAN region.
+            In the midst of a world driven by the rapid evolution of technology,
+            demands have shifted from basic needs to integrated, fast, and above
+            all, reliable Prime Services. Imagine the growing need for
+            technology across various business sectors, multiplied by countless
+            countries around the world — and then focus in on the ASEAN region.
           </p>
 
           <button
@@ -76,12 +75,13 @@ const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-0 right-0 w-[300px] md:w-[400px] lg:w-[950px]">
-        <Image
+        <img
           src="/background/port.png"
           alt="Port Automation Illustration"
-          width={500}
-          height={300}
+          width="500"
+          height="300"
           className="w-full h-auto"
+          loading="lazy"
         />
       </div>
     </section>

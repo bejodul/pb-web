@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -73,11 +73,11 @@ export default function Solutions() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Image
+              <img
                 src={product}
                 alt={`Product ${i}`}
-                fill
                 className="object-cover rounded-xl"
+                style={{ width: "100%", height: "100%" }}
               />
             </motion.div>
           );

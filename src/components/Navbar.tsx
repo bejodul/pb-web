@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -71,15 +72,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-5 justify-center">
-          <Image
+          <img
             src="/logo/logo.png"
             alt="Company Logo"
-            width={50}
-            height={50}
-            priority
+            width="50"
+            height="50"
+            className="" // tambahkan kelas Tailwind jika perlu
+            loading="eager" // memastikan langsung dimuat, mirip `priority` di next/image
           />
           <Link href="/" className="text-2xl font-bold text-green">
-            Primus Niaga Brunei
+            Primus Niaga (B) Sdn Bhd
           </Link>
         </div>
 
@@ -110,36 +112,20 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white px-4 pt-4 pb-6 shadow-md">
           <ul className="space-y-4 text-gray-700 text-lg">
-            <li className="font-bold">
-              <Link href="/" onClick={() => setIsOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={() => setIsOpen(false)}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" onClick={() => setIsOpen(false)}>
-                Services & Solutions
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
-                Clients
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
-                Principals
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
-                Contact Us
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.section}>
+                <Link
+                  href={item.href}
+                  className={`hover:text-blue-600 transition duration-300 ${
+                    effectiveActiveSection === item.section ? "font-bold" : ""
+                  }`}
+                  onClick={() => setActiveSection(item.section)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+            ?
           </ul>
         </div>
       )}

@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 // components/ServicesSolutions.tsx
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesSolutions() {
@@ -18,13 +18,15 @@ export default function ServicesSolutions() {
           {/* Link to Solutions Page */}
           <Link href="/solutions">
             <div className="bg-white border border-gray-200 shadow-md rounded-lg p-6 cursor-pointer hover:shadow-xl transition duration-300">
-              <Image
+              <img
                 src="/images/solution.png"
                 alt="Our Solutions"
-                width={120}
-                height={120}
+                width="120"
+                height="120"
                 className="mx-auto mb-4"
+                loading="lazy" // opsional, untuk lazy-loading
               />
+
               <h4 className="text-lg font-medium text-gray-700">
                 Our Solutions
               </h4>
@@ -34,13 +36,15 @@ export default function ServicesSolutions() {
           {/* Link to Services Page */}
           <Link href="/services">
             <div className="bg-white border border-gray-200 shadow-md rounded-lg p-6 cursor-pointer hover:shadow-xl transition duration-300">
-              <Image
+              <img
                 src="/images/service.png"
                 alt="Our Services"
-                width={120}
-                height={120}
+                width="120"
+                height="120"
                 className="mx-auto mb-4"
+                loading="lazy" // opsional, untuk lazy-loading
               />
+
               <h4 className="text-lg font-medium text-gray-700">
                 Our Services
               </h4>
@@ -50,13 +54,15 @@ export default function ServicesSolutions() {
           {/* Link to Warranties Page */}
           <Link href="#">
             <div className="bg-white border border-gray-200 shadow-md rounded-lg p-6 cursor-pointer hover:shadow-xl transition duration-300">
-              <Image
+              <img
                 src="/images/warranty.png"
                 alt="Our Warranties"
-                width={120}
-                height={120}
+                width="120"
+                height="120"
                 className="mx-auto mb-4"
+                loading="lazy" // opsional, untuk lazy-loading
               />
+
               <h4 className="text-lg font-medium text-gray-700">
                 Our Warranties
               </h4>

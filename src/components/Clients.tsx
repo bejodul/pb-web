@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 // components/OurClients.tsx
-import Image from "next/image";
 
 export default function OurClients() {
   return (
@@ -15,12 +15,13 @@ export default function OurClients() {
 
         {/* Logo image */}
         <div className="flex justify-center">
-          <Image
-            src={"/images/client.png"} // ganti sesuai nama file kamu
+          <img
+            src="/images/client.png" // ganti sesuai path gambarmu
             alt="Our Clients"
-            width={1200}
-            height={800}
             className="w-full h-auto max-w-5xl max-h-[600px]"
+            width="1200"
+            height="800"
+            loading="lazy" // opsional, untuk lazy-load
           />
         </div>
       </div>

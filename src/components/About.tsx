@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 // components/AboutUs.tsx
-import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -51,12 +51,13 @@ export default function AboutUs() {
           <div className="absolute -top-8 -right-8 w-80 h-80 bg-cyan-100 rounded-full -z-10"></div>
 
           {/* Image */}
-          <Image
-            src="/images/about.png" // Sesuaikan dengan path gambarmu
+          <img
+            src="/images/about.png"
             alt="Port Containers"
-            width={600}
-            height={400}
             className="rounded-lg shadow-lg"
+            width="600"
+            height="400"
+            loading="lazy"
           />
         </div>
       </div>

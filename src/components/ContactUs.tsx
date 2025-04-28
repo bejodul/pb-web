@@ -40,7 +40,7 @@ export default function ContactUs() {
 
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-gray-500">
-          © 2025 PT. Primus Niaga Brunei.<br />
+          © 2025 Primus Niaga (B) Sdn Bhd.<br />
           All rights reserved.
         </div>
       </div>
